@@ -1,0 +1,39 @@
+   ┌──────────────────────────────────────┐
+   │           index.html                 │
+   │  - Buttons, score text, log, etc.    │
+   │  - "data-choice" for user selection  │
+   └──────────────┬───────────────────────┘
+                  │
+                  │  (When page loads)
+                  ▼
+        ┌──────────────────────┐
+        │        main.js        │
+        │  - Waits for DOM load │
+        │  - Listens to clicks  │
+        │  - Calls Game methods │
+        └─────────┬─────────────┘
+                  │
+         click →  │
+                  ▼
+        ┌──────────────────────┐
+        │        game.js       │
+        │  - Decides winner     │
+        │  - Tracks scores      │
+        │  - Calls UI to update │
+        └─────────┬─────────────┘
+                  │
+                  ▼
+        ┌──────────────────────┐
+        │        ui.js         │
+        │  - Updates text/colors│
+        │  - Logs results       │
+        │  - Resets UI          │
+        └─────────┬─────────────┘
+                  │
+                  │  (Changes HTML directly)
+                  ▼
+         ┌──────────────────────┐
+         │     index.html       │
+         │  - Shows new scores  │
+         │  - Shows result msg  │
+         └──────────────────────┘

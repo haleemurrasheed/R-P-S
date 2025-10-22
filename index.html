@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+
+    <!-- Link to our main stylesheet -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body>
+    <main class="game-container">
+      <!-- Title -->
+      <h1>🪨 Rock • 📄 Paper • ✂️ Scissors</h1>
+
+      <!-- Scores and round counter -->
+      <section class="scoreboard">
+        <div>Round: <span id="round">0</span> / 5</div>
+        <div>You: <span id="human-score">0</span></div>
+        <div>Computer: <span id="computer-score">0</span></div>
+      </section>
+
+      <!-- Result message -->
+      <h2 id="result" class="result">Click a button to play!</h2>
+
+      <!-- Choice buttons -->
+      <section class="choices">
+        <!-- Each button has a data-choice attribute -->
+        <button class="choice" data-choice="rock">🪨 Rock</button>
+        <button class="choice" data-choice="paper">📄 Paper</button>
+        <button class="choice" data-choice="scissors">✂️ Scissors</button>
+      </section>
+
+      <!-- Log of all results -->
+      <section id="log" class="log"></section>
+
+      <!-- Restart button -->
+      <button id="restart" class="restart">🔁 Play Again</button>
+    </main>
+
+    <!-- Main JavaScript entry -->
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

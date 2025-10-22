@@ -1,0 +1,108 @@
+/* src/style.css */
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Page layout */
+body {
+  background: linear-gradient(135deg, #282c34, #3b3f47);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Scoreboard section */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Result text styling */
+.result {
+  margin: 1rem 0;
+  min-height: 2rem;
+  font-weight: bold;
+}
+
+/* Choice buttons */
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.choice {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: #ffe0b2;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.choice:hover {
+  background: #ffd180;
+  transform: scale(1.05);
+}
+
+.choice:nth-child(1) {
+  background: #dc2626;
+}
+.choice:nth-child(2) {
+  background: #16a34a;;
+}
+.choice:nth-child(3) {
+  background: #2563eb;;
+}
+
+/* Log section for round history */
+.log {
+  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Restart button */
+.restart {
+  margin-top: 1rem;
+  background: hsl(35, 91%, 49%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.restart:hover {
+  background: #ea782d;
+}
